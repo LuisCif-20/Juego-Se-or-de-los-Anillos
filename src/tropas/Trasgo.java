@@ -8,6 +8,8 @@ public class Trasgo extends Bestias {
         super.vida = 325;
         super.nombre = nombre;
         super.ponerArmadura();
+        super.atacarEnemigo();
+        super.tipo = "Trasgo";
     }
 
 }

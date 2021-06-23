@@ -55,4 +55,16 @@ public class Dados {
         }
     }
 
+    public int incrementarDaño(){
+        do {
+            dado1 = random.nextInt(11);
+            dado2 = random.nextInt(12);
+        } while (dado1 == dado2);
+        if (dado1 > dado2) {
+            return dado1;
+        } else {
+            return dado2;
+        }
+    }
+
 }

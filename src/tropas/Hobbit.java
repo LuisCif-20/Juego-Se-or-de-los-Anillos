@@ -10,5 +10,36 @@ public class Hobbit extends Heroes{
         super.vida = 200;
         super.nombre = nombre;
         super.ponerArmadura();
+        super.atacarEnemigo();
+        super.tipo = "Hobbit";
     }
+
+    //Metodos
+    @Override
+    public boolean modificarDañoEscudo(Caracter rival){
+        super.atacarEnemigo();
+        if (rival instanceof Trasgo) {
+            super.setAtaque(super.getAtaque()-5);
+            if (rival.getArmadura() < super.getAtaque()) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            if (rival.getArmadura() < super.getAtaque()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    @Override
+    public void modificarDañoVida(Caracter rival){ 
+        super.atacarEnemigo();
+        if (rival instanceof Trasgo) {
+            super.setAtaque(super.getAtaque()-5);
+        }
+    }
+
 }

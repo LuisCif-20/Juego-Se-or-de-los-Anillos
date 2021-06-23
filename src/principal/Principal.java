@@ -21,10 +21,10 @@ public class Principal {
 
 
     public Principal(){
-        System.out.println(elfo1.getNombre() + " Armadura: " + elfo1.getArmadura() + " Vida: " + elfo1.getVida());
-        System.out.println(hobbit1.getNombre() + " Armadura: " + hobbit1.getArmadura() + " Vida: " + hobbit1.getVida());
-        System.out.println(hombre1.getNombre() + " Armadura: " + hombre1.getArmadura() + " Vida: " + hombre1.getVida());
-        System.out.println(orco1.getNombre() + " Armadura: " + orco1.getArmadura() + " Vida: " + orco1.getVida());
-        System.out.println(trasgo1.getNombre() + " Armadura: " + trasgo1.getArmadura() + " Vida: " + trasgo1.getVida());
+        System.out.println(elfo1.getNombre() + " Armadura: " + elfo1.getArmadura() + " Vida: " + elfo1.getVida() + " Ataque: " + elfo1.getAtaque());
+        System.out.println(hobbit1.getNombre() + " Armadura: " + hobbit1.getArmadura() + " Vida: " + hobbit1.getVida() + " Ataque: " + hobbit1.getAtaque());
+        System.out.println(hombre1.getNombre() + " Armadura: " + hombre1.getArmadura() + " Vida: " + hombre1.getVida() + " Ataque: " + hombre1.getAtaque());
+        System.out.println(orco1.getNombre() + " Armadura: " + orco1.getArmadura() + " Vida: " + orco1.getVida() + " Ataque: " + orco1.getAtaque());
+        System.out.println(trasgo1.getNombre() + " Armadura: " + trasgo1.getArmadura() + " Vida: " + trasgo1.getVida() + " Ataque: " + trasgo1.getAtaque());
     }
 }

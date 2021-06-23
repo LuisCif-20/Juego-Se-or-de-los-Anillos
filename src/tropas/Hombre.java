@@ -11,5 +11,7 @@ public class Hombre extends Heroes{
         super.vida = 180;
         super.nombre = nombre;
         super.ponerArmadura();
+        super.atacarEnemigo();
+        super.tipo = "Hombre";
     }
 }
