@@ -47,8 +47,12 @@ public class Juego {
         int ronda;
         do {
             for (int i = 0; i < control; i++) {
-                heroes[i].mostrarProcesos(bestias[i]);
-                bestias[i].mostrarProcesos(heroes[i]);
+                if (heroes[i].getVida()> 0) {
+                    heroes[i].mostrarProcesos(bestias[i]);
+                }
+                if (bestias[i].getVida() > 0) {
+                    bestias[i].mostrarProcesos(heroes[i]);
+                }
                 buscarJugadoresBestias();
                 buscarJugadoresHeroes();
                 editarControl();
