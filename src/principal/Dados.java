@@ -43,8 +43,8 @@ public class Dados {
 
     public int darValorArmadura(){
         do {
-            dado1 = random.nextInt(120) + 50;
-            dado2 = random.nextInt(120) + 50;
+            dado1 = random.nextInt(21) + 50;
+            dado2 = random.nextInt(21) + 50;
         } while (dado1 == dado2);
         if (dado1 > dado2) {
             resultadoArmadura = dado1;

@@ -4,9 +4,11 @@ public class Hobbit extends Heroes{
     
 
     //Constructor
-    
-    public Hobbit(){
+
+    public Hobbit(String nombre){
         super();
         super.vida = 200;
+        super.nombre = nombre;
+        super.ponerArmadura();
     }
 }

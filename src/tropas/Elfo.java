@@ -4,9 +4,10 @@ public class Elfo extends Heroes {
     
     //Constructor
 
-    public Elfo(){
+    public Elfo(String nombre){
         super();
         super.vida = 250;
-        super.armadura = super.dados.darValorArmadura();
+        super.nombre = nombre;
+        super.ponerArmadura();
     }
 }
