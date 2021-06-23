@@ -15,7 +15,7 @@ public class Orco extends Bestias{
 
     //Metodos
     @Override
-    public boolean modificarDañoEscudo(Caracter rival){
+    public boolean modificarDanioEscudo(Caracter rival){
         super.atacarEnemigo();
         if (rival instanceof Heroes) {
             int armadura = rival.getArmadura() - (int)(rival.getArmadura()*0.1);

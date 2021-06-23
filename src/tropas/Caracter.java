@@ -26,7 +26,7 @@ public class Caracter {
         ataque = dados.crearValorAtaque(this);
     }
 
-    public boolean modificarDañoEscudo(Caracter rival){
+    public boolean modificarDanioEscudo(Caracter rival){
         if (rival.getArmadura() < this.getAtaque()) {
             return true;
         } else {
@@ -34,30 +34,45 @@ public class Caracter {
         }
     }
 
-    public void modificarDañoVida(Caracter rival){ 
+    public void modificarDanioVida(Caracter rival){ 
         atacarEnemigo();
     }
 
     public void pelear(Caracter rival){
         if (rival.getArmadura() <= 0) {
-            modificarDañoVida(rival);
+            rival.setArmadura(0); 
+            if (rival.getVida() <= 0) {
+                rival.setVida(0);
+            }
+            modificarDanioVida(rival);
             rival.setVida(rival.getVida() - this.getAtaque());
         } else {
-            if (modificarDañoEscudo(rival) == true) {
+            if (modificarDanioEscudo(rival) == true) {
                 rival.setArmadura(rival.getArmadura() - this.getAtaque());
+                if (rival.getArmadura() <= 0) {
+                    rival.setArmadura(0);
+                }
             } else {
-                System.out.println("No pudiste romper su armadura");
+                System.out.println("No se rompio la armadura del rival");
             }
         }
     }
 
     public void mostrarProcesos(Caracter rival){
-        System.out.print("Pelea entre: ");
+        System.out.print("\nPelea entre: ");
         System.out.println(this.getTipo() + " " + this.getNombre() + " Vida: " + this.getVida() + " Armadura: " + this.getArmadura() + " ---Contra--- " + rival.getTipo() + " " + rival.getNombre() + " Vida: " + rival.getVida() + " Armadura: " + rival.getArmadura());
         pelear(rival);
         System.out.println("Estatus despues del ataque");
         System.out.println(this.getTipo() + " " + this.getNombre() + " Vida: " + this.getVida() + " Armadura: " + this.getArmadura() + " ---Contra--- " + rival.getTipo() + " " + rival.getNombre() + " Vida: " + rival.getVida() + " Armadura: " + rival.getArmadura());
         
+    }
+
+    public boolean mostrarSiEstaMuerto(){
+        if (this.getVida() <= 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     

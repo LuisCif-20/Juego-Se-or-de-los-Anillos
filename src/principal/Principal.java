@@ -1,30 +1,30 @@
 package principal;
 
-import tropas.Elfo;
-import tropas.Hobbit;
-import tropas.Hombre;
-import tropas.Orco;
-import tropas.Trasgo;
+import tropas.*;
+import java.util.*;
 
 public class Principal {
-    
+
     public static void main(String[] args) {
         Principal principal = new Principal();
     }
 
-    private Elfo elfo1 = new Elfo("Legolas");
-    private Hobbit hobbit1 = new Hobbit("Frodo");
-    private Hombre hombre1 = new Hombre("Marth");
-    private Orco orco1 = new Orco("Sephiroth");
-    private Trasgo trasgo1 = new Trasgo("Ganon");
+    private Juego juego = new Juego();
+    private Scanner scan = new Scanner(System.in);
 
-
-
-    public Principal(){
-        System.out.println(elfo1.getNombre() + " Armadura: " + elfo1.getArmadura() + " Vida: " + elfo1.getVida() + " Ataque: " + elfo1.getAtaque());
-        System.out.println(hobbit1.getNombre() + " Armadura: " + hobbit1.getArmadura() + " Vida: " + hobbit1.getVida() + " Ataque: " + hobbit1.getAtaque());
-        System.out.println(hombre1.getNombre() + " Armadura: " + hombre1.getArmadura() + " Vida: " + hombre1.getVida() + " Ataque: " + hombre1.getAtaque());
-        System.out.println(orco1.getNombre() + " Armadura: " + orco1.getArmadura() + " Vida: " + orco1.getVida() + " Ataque: " + orco1.getAtaque());
-        System.out.println(trasgo1.getNombre() + " Armadura: " + trasgo1.getArmadura() + " Vida: " + trasgo1.getVida() + " Ataque: " + trasgo1.getAtaque());
+    public Principal() {
+        int opcion;
+        do {
+            System.out.println("\nBienvenido al juego de el señor de los anillos");
+            System.out.println("¿Que quieres Hacer");
+            System.out.println("1) Jugar");
+            System.out.println("2) Salir");
+            opcion = Integer.parseInt(scan.nextLine());
+            if (opcion == 1) {
+                juego.jugar();
+            } else {
+                System.out.println("Hasta Pronto");
+            }
+        } while (opcion == 1);
     }
 }

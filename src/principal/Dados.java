@@ -55,7 +55,7 @@ public class Dados {
         }
     }
 
-    public int incrementarDaño(){
+    public int incrementarDanio(){
         do {
             dado1 = random.nextInt(11);
             dado2 = random.nextInt(12);

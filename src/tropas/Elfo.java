@@ -15,10 +15,10 @@ public class Elfo extends Heroes {
 
     //Metodos
     @Override
-    public boolean modificarDañoEscudo(Caracter rival){
+    public boolean modificarDanioEscudo(Caracter rival){
         super.atacarEnemigo();
         if (rival instanceof Orco) {
-            super.setAtaque(super.getAtaque()+super.dados.incrementarDaño());
+            super.setAtaque(super.getAtaque()+super.dados.incrementarDanio());
             if (rival.getArmadura() < super.getAtaque()) {
                 return true;
             } else {
@@ -34,9 +34,9 @@ public class Elfo extends Heroes {
     }
 
     @Override
-    public void modificarDañoVida(Caracter rival){ 
+    public void modificarDanioVida(Caracter rival){ 
         if (rival instanceof Orco) {
-            super.setAtaque(super.getAtaque()+super.dados.incrementarDaño());
+            super.setAtaque(super.getAtaque()+super.dados.incrementarDanio());
         }
     }
 

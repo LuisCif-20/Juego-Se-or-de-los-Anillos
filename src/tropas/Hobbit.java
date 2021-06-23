@@ -16,7 +16,7 @@ public class Hobbit extends Heroes{
 
     //Metodos
     @Override
-    public boolean modificarDañoEscudo(Caracter rival){
+    public boolean modificarDanioEscudo(Caracter rival){
         super.atacarEnemigo();
         if (rival instanceof Trasgo) {
             super.setAtaque(super.getAtaque()-5);
@@ -35,7 +35,7 @@ public class Hobbit extends Heroes{
     }
 
     @Override
-    public void modificarDañoVida(Caracter rival){ 
+    public void modificarDanioVida(Caracter rival){ 
         super.atacarEnemigo();
         if (rival instanceof Trasgo) {
             super.setAtaque(super.getAtaque()-5);
